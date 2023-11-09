@@ -1,0 +1,26 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.jsx",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js --mode development -w -d",
+    "client:dev-server": "webpack-dev-server --mode development",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js --mode development -w -d",
+    "client:dev": "yarn dev",
+    "clean": "./task clean",
+    "compile": "./task compile",
+    "lint": "./task lint",
+    "test": "./task test",
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js -p --progress --mode production ",
+    "client:build": "yarn run build",
+    "prebuild": "rimraf dist/"
+  },
+  "keywords": [],
+  "author": "Charles Hufnagel",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}
